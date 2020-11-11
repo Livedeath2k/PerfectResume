@@ -1,0 +1,354 @@
+Example JSON application data
+Resume Upload
+JSON Resume upload example
+{ 
+   "applicant":{ 
+      "email":"john.doe@indeed.com",
+      "fullName":"John Doe",
+      "phoneNumber":"555-555-4321",
+      "resume":{ 
+         "file":{ 
+            "contentType":"text/plain",
+            "data":"SGVsbG8h",
+            "fileName":"resume.txt"
+         }
+      }
+   },
+   "appliedOnMillis":1325276227653,
+   "job":{ 
+      "jobCompany":"Your Company",
+      "jobId":"7775e2bc62b7f77e",
+      "jobLocation":"New York, NY 10110",
+      "jobMeta":"",
+      "jobTitle":"Test Engineer",
+      "jobUrl":"http://www.yourcompany.com/careers/yourjob123.html"
+   },
+   "locale":"en_US"
+}
+
+Application with Indeed Resume
+JSON Indeed Resume example
+{ 
+   "locale":"en_US",
+   "appliedOnMillis":1324051581711,
+   "job":{ 
+      "jobId":"7775e2bc62b7f77e",
+      "jobTitle":"Test Engineer",
+      "jobCompany":"Your Company",
+      "jobLocation":"New York, NY 10110",
+      "jobUrl":"http://www.yourcompany.com/careers/yourjob123.html",
+      "jobMeta":""
+   },
+   "applicant":{ 
+      "fullName":"John Doe",
+      "email":"john.doe@indeed.com",
+      "phoneNumber":"555-555-4321",
+      "coverletter":"coverletter - text",
+      "resume":{ 
+         "text":"resume - text",
+         "hrXml":"resume-hr-xml",
+         "html":"resume - html",
+         "json":{ 
+            "firstName":"John",
+            "lastName":"Doe",
+            "headline":"headline",
+            "summary":"summary",
+            "publicProfileUrl":"http://www.indeed.com/r/123456",
+            "additionalInfo":"me-additionalinfo",
+            "phoneNumber":"555-555-4321",
+            "location":{ 
+               "city":"Austin, TX"
+            },
+            "skills":"HTML, JavaScript",
+            "positions":{ 
+               "_total":1,
+               "values":[ 
+                  { 
+                     "title":"Product Manager",
+                     "company":"Indeed",
+                     "location":"Austin, TX",
+                     "startDateMonth":"09",
+                     "startDateYear":"2007",
+                     "endDateMonth":"-1",
+                     "endDateYear":"-1",
+                     "endCurrent":true,
+                     "description":"I am the current product manager for Indeed Apply."
+                  }
+               ]
+            },
+            "educations":{ 
+               "_total":1,
+               "values":[ 
+                  { 
+                     "degree":"B.A.",
+                     "field":"Computer Science",
+                     "school":"University of Texas, Austin",
+                     "location":"Austin, TX",
+                     "startDate":"2002",
+                     "endDate":"2006",
+                     "endCurrent":false
+                  }
+               ]
+            },
+            "links":{ 
+               "_total":1,
+               "values":[ 
+                  { 
+                     "url":"http://www.indeed.com"
+                  }
+               ]
+            },
+            "awards":{ 
+               "_total":1,
+               "values":[ 
+                  { 
+                     "title":"Best PM at Indeed",
+                     "dateMonth":"04",
+                     "dateYear":"2008",
+                     "description":"Best PM is voted on by Indeed employees and given to the PM with the most votes."
+                  }
+               ]
+            },
+            "certifications":{ 
+               "_total":1,
+               "values":[ 
+                  { 
+                     "title":"cert-title",
+                     "startDateMonth":"02",
+                     "startDateYear":"2007",
+                     "endDateMonth":"02",
+                     "endDateYear":"2008",
+                     "endCurrent":false,
+                     "description":"cert-description"
+                  }
+               ]
+            },
+            "associations":{ 
+               "_total":1,
+               "values":[ 
+                  { 
+                     "title":"group-title",
+                     "startDateMonth":"01",
+                     "startDateYear":"2009",
+                     "endDateMonth":"-1",
+                     "endDateYear":"-1",
+                     "endCurrent":true,
+                     "description":"group-description"
+                  }
+               ]
+            },
+            "patents":{ 
+               "_total":1,
+               "values":[ 
+                  { 
+                     "patentNumber":"patent-number",
+                     "title":"patent-title",
+                     "url":"patent-url",
+                     "dateMonth":"02",
+                     "dateYear":"2009",
+                     "description":"patent-description"
+                  }
+               ]
+            },
+            "publications":{ 
+               "_total":1,
+               "values":[ 
+                  { 
+                     "title":"pub-title",
+                     "url":"pub-url",
+                     "dateDay":"14",
+                     "dateMonth":"10",
+                     "dateYear":"2004",
+                     "description":"pub-description"
+                  }
+               ]
+            },
+            "militaryServices":{ 
+               "_total":1,
+               "values":[ 
+                  { 
+                     "serviceCountry":"mil-country",
+                     "branch":"mil-branch",
+                     "rank":"mil-rank",
+                     "startDateMonth":"02",
+                     "startDateYear":"2003",
+                     "endDateMonth":"12",
+                     "endDateYear":"2008",
+                     "endCurrent":false,
+                     "commendations":"mil-commendations",
+                     "description":"mil-description"
+                  }
+               ]
+            }
+         },
+         "file":{ 
+            "contentType":"application/octet-stream",
+            "data":"SGVsbG8h=",
+            "fileName":"John_Doe.pdf"
+         }
+      }
+   }
+}
+
+Click here to view or download a full example JSON post file.
+IA JSON fields
+Top-level
+Field name 	Description 	Example
+id 	Unique ID for the application as assigned by Indeed. 	5156eb63c9a0a8ac
+9358c3a444a2818c
+8a5ffdbcba5960ec
+0cace3277f6b99df
+appliedOnMillis 	The date and time the user applied expressed in standard Unix time. 	1324051581711
+job 	A job object representing the data provided by your button’s HTML data attributes. 	See Job object fields
+applicant 	An applicant object representing the applicant. 	See Applicant object fields
+analytics 	
+
+An object containing the following information:
+
+    ip – IP address of the user
+    referrer – page the Easily Apply button is on if the button is present
+    useragent – device/useragent of the user
+    targetedApplyAd – returns true for Indeed Apply ads served on Indeed.
+    sponsored – returns true if the job is sponsored on the Indeed search engine results page, and returns false if the job is organic, meaning not sponsored, on Indeed.
+
+Note: sponsored returns false if the job click did not originate on Indeed, such as when a user applies from a 3rd-party website. 3rd-party sites cannot specify whether a job is sponsored.
+
+To track sponsored job clicks on 3rd-party sites, enable URL tracking. Because JSON responses do not include the “sponsored” parameter, you must also enable XML-only responses. Sponsored job tracking from 3rd-party websites must be configured per job in your client’s Advertiser accounts and appended to the joburls, which can then be tracked by the ATS. Refer to the Sponsored Jobs documentation for more information.
+	
+
+[No example for this field]
+locale 	The locale that was used when applying to the job. 	en_US
+Job object
+
+Note: These fields are based on the button configuration.
+Field name 	Description 	Example
+jobUrl 	The canonical URL to the complete job description. 	http://www.yourcompany.com/
+
+careers/yourjob123.html
+jobId 	The ID of the job, useful for your own internal tracking. 	7775e2bc62b7f77e
+jobTitle 	The title of the job to display. 	Test Engineer
+jobCompany 	The name of the company.
+
+Note: This is called jobCompanyName in the data-attributes.
+	Your Company
+jobLocation 	The location of the job. 	New York, NY 10110
+jobMeta 	Arbitrary information provided in the original button configuration. 	right-rail-apply-button
+Applicant
+Name 	Always provided? 	Description 	Example
+fullName 	Yes 	The name of the applicant. If the user is using their Indeed Resume, this will be their firstName + lastName. 	John Doe
+email 	Yes 	The email of the applicant. 	john.doe@indeed.com
+phoneNumber 	No 	The phoneNumber if provided by the applicant. 	555-555-4321
+coverletter 	No 	The cover letter of the applicant. If a user did not provide a cover letter, this field will not be present in the JSON object. 	My cover letter
+resume 	Yes 	An object representing the user’s resume. 	See the Resume fields section
+Resume
+Field name 	Resume upload 	Indeed Resume 	Description
+file 	Yes 	Yes 	An object containing the binary resume file.
+text 	No 	Yes 	A text representation of the resume. Only provided if the user is using their Indeed Resume.
+html 	No 	Yes 	A representation of the resume. Only provided if the user is using their Indeed Resume.
+hrXml 	No 	Yes 	An HR-XML representation of the resume. Only provided if the user is using their Indeed Resume.
+json 	No 	Yes 	A JSON structured representation of the resume data. See Indeed resume below.
+Resume file
+Name 	Description 	Example
+data 	The file’s raw binary bytes encoded using base 64. 	SGVsbG8h=
+fileName 	The filename of the uploaded resume. The filename will be auto generated when using the Indeed Resume. 	resume.txt
+contentType 	The content type identified using the resume file’s extension. 	application/octet-stream
+Indeed resume
+
+An array-like object contains a _total field and a values field. The _total field is an integer indicating the length of the array. The values field is a JSON array containing the _total objects.
+Field name 	Type 	Description
+firstName 	string 	The applicant’s first name.
+lastName 	string 	The applicant’s last name.
+headline 	string 	The applicant’s resume headline.
+summary 	string 	The applicant’s resume summary.
+publicProfileUrl 	url 	If the Indeed Resume is public, the URL to view the user’s public resume.
+additionalInfo 	string 	Any additional info.
+phoneNumber 	string 	The phone number of the user if included on the user’s Indeed Resume.
+location 	object 	JSON object representing the user’s location if provided.
+location.city 	string 	The applicant’s city.
+location.country 	string 	The applicant’s country.
+location.postalCode 	string 	The applicant’s postal code.
+skills 	string 	The applicant’s skills.
+positions 	array-like 	An array-like object of position objects.
+educations 	array-like 	An array-like object of education objects.
+links 	array-like 	An array-like object of link objects.
+awards 	array-like 	An array-like object of award objects.
+certifications 	array-like 	An array-like object of certification objects.
+associations 	array-like 	An array-like object of association objects.
+patents 	array-like 	An array-like object of patent objects.
+publications 	array-like 	An array-like object of publication objects.
+militaryServices 	array-like 	An array-like object of military service objects.
+Indeed resume position
+Field name 	Type 	Description 	Example
+title 	string 	The title of the job. 	Product Manager
+company 	string 	The company’s name. 	Indeed
+location 	string 	The location of the position. 	Austin, TX
+description 	string 	The description of the position. 	——–
+startDateMonth 	integer 	An integer (1-12) representing the starting month (-1 if not provided). 	9
+startDateYear 	integer 	The year of the start date ( -1 if not provided). 	2007
+endDateMonth 	integer 	1-12 integer representing the starting month (-1 if not provided). 	-1
+endDateYear 	integer 	The year of the end date (-1 if not provided). 	-1
+endCurrent 	boolean 	A flag indicating if this is a current position. 	True
+Indeed resume education
+Field name 	Type 	Description 	Example
+degree 	string 	The degree level attained for this education listing. 	B.A.
+field 	string 	The degree field studied for this education listing. 	Computer Science
+school 	string 	The institution for this education listing. 	University of Texas
+location 	string 	The institution location. 	Austin, TX
+startDateYear 	integer 	The year of the start date ( -1 if not provided). 	2007
+endDateYear 	integer 	The year of the end date (-1 if not provided). 	-1
+endCurrent 	boolean 	A flag indicating if this education is in progress. 	True
+Indeed resume link
+Field name 	Type 	Description 	Example
+url 	string 	The URL of the link. 	http://www.indeed.com
+Indeed resume award
+Field name 	Type 	Description 	Example
+title 	string 	The title of this award. 	Best PM at Indeed
+description 	string 	The description for this award. 	Awarded for being the best PM in my company.
+dateMonth 	integer 	An integer (1-12) representing the starting month (-1 if not provided). 	9
+dateYear 	integer 	The year of the start date ( -1 if not provided). 	2007
+Indeed resume certification
+Field name 	Type 	Description 	Example
+title 	string 	The title of this certification. 	PMP
+description 	string 	The description of this certification. 	Project Management Professional certification
+startDateMonth 	integer 	An integer (1-12) representing the starting month (-1 if not provided). 	9
+startDateYear 	integer 	The year of the start date ( -1 if not provided). 	2007
+endDateMonth 	integer 	An integer (1-12) representing the ending month (-1 if not provided). 	-1
+endDateYear 	integer 	The year of the end date (-1 if not provided). 	-1
+endCurrent 	boolean 	A flag indicating if this is a current certification. 	True
+Indeed resume association groups
+Field name 	Type 	Description 	Example
+title 	string 	The title of this association. 	Society for Technical Communication
+description 	string 	A description of this association. 	A professional association for technical communication professionals.
+startDateMonth 	integer 	An integer (1-12) representing the starting month (-1 if not provided). 	9
+startDateYear 	integer 	The year of the start date ( -1 if not provided). 	2007
+endDateMonth 	integer 	An integer (1-12) representing the ending month (-1 if not provided). 	-1
+endDateYear 	integer 	The year of the end date (-1 if not provided). 	-1
+endCurrent 	boolean 	A flag indicating if this is a current association. 	True
+Indeed resume patent
+Field name 	Type 	Description 	Example
+title 	string 	The title of this patent. 	——–
+description 	string 	The description of this patent. 	——–
+patentNumber 	string 	The patent number. 	——–
+url 	string 	The URL for this patent. 	——–
+dateMonth 	integer 	An integer (1-12) representing the starting month (-1 if not provided). 	9
+dateYear 	integer 	The year of the start date ( -1 if not provided). 	2007
+Indeed resume publication
+Field name 	Type 	Description 	Example
+title 	string 	The title of this publication 	——–
+description 	string 	A description of this publication. 	——–
+url 	string 	A URL for this publication. 	——–
+dateDay 	integer 	The day of the month (-1 if not provided). 	9
+dateMonth 	integer 	An integer (1-12) representing the month (-1 if not provided). 	9
+dateYear 	integer 	The year of the date ( -1 if not provided). 	2007
+Indeed resume military service
+Field name 	Type 	Description 	Example
+serviceBranch 	string 	The service branch for this service entry. 	——–
+branch 	string 	The branch for this service entry. 	——–
+rank 	string 	The rank for this service entry. 	——–
+description 	string 	A description for this service entry. 	——–
+commendations 	string 	Any commendations earned for this service entry. 	——–
+startDateMonth 	integer 	An integer (1-12) representing the starting month (-1 if not provided). 	9
+startDateYear 	integer 	The year of the start date ( -1 if not provided). 	2007
+endDateMonth 	integer 	An integer (1-12) representing the starting month (-1 if not provided). 	-1
+endDateYear 	integer 	The year of the end date (-1 if not provided). 	-1
+endCurrent 	boolean 	A flag indicating if this is a current position. 	True
